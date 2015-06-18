@@ -31,3 +31,13 @@ cacheSolve <- function(x, ...) {
   x$set_inverse(inv)
   inv
 }
+
+## Test 1
+mat <-  matrix(c(4,1,1,2,1,-1,1,1,1), nrow = 3, ncol = 3)
+mat_cache <- makeCacheMatrix(mat)
+cacheSolve(mat_cache)
+
+## Test 2
+mat <- matrix(rnorm(25), 5)
+mat_cache <- makeCacheMatrix(mat)
+cacheSolve(mat_cache)
